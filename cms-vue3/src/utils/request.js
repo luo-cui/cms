@@ -1,3 +1,4 @@
+// 使用axios,封装get,post请求
 import axios from "axios";
 import { getToken } from "@/utils/token";
 import { ElMessage } from "element-plus";
