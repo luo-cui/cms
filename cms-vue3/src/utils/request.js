@@ -22,7 +22,7 @@ export const apiDomain = "https://apifoxmock.com/m1/5424273-5098690-default"; //
 const request = axios.create({
   baseURL: apiDomain,
   timeout: 5000,
-  withCredentials: true, //跨域
+  // withCredentials: true, //跨域 // 未对接到后端接口之前暂不使用
 });
 
 // 添加请求拦截器  request.use  在发送请求之前做些什么
