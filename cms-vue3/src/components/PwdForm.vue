@@ -1,10 +1,6 @@
 <template>
   <!-- 显示/隐藏对话框  -->
-  <el-dialog
-    v-model="dialogVisible"
-    :title="title"
-    width="500"
-  >
+  <el-dialog v-model="dialogVisible" :title="title" width="500">
     <div>
       <!-- 插入 form 表单 -->
       <el-form
@@ -77,7 +73,7 @@ const rules = reactive({
   // ...pwdRules 将 pwdRules 数组中的所有元素展开并添加到 re_password 数组中
   re_password: [
     ...pwdRules,
-    // 自定义规则是对象属性 
+    // 自定义规则是对象属性
     // validator: func
     // 此项需要验证用户输入是否一致
     {
@@ -86,7 +82,7 @@ const rules = reactive({
         if (value !== formModel.password) {
           callback(new Error("两次密码不一致"));
         } else {
-          callback();//不传参数直接调用，表示验证通过
+          callback(); //不传参数直接调用，表示验证通过
         }
       },
       trigger: "blur",
@@ -129,7 +125,7 @@ const dialogVisible = computed({
   // 获取props传来的dialog
   get: () => props.showDialog,
   set: (val) => {
-    emit("update:showDialog", val); 
+    emit("update:showDialog", val);
   },
 });
 
@@ -192,7 +188,7 @@ const sendSms = () => {
   }).then((res) => {
     if (res.code == 1) {
       // 发送验证码的请求成功之后，才开始倒计时
-      seconds.value = 60; 
+      seconds.value = 60;
       // 使用 setInterval 启动一个新的定时器，每秒执行一次回调函数
       timer && clearInterval(timer); // 清除之前的定时器（如果有）,防止多次点击按钮时产生多个定时器
       // 因为点击之后，setInterval 就会启动定时器,使按钮在60s内不可用，60s之后就可使用了
