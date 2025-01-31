@@ -168,7 +168,6 @@ if (userPwd) {
 
 // 重置密码对话框
 const showPwdDialog = ref(false);
-console.log("是否显示PwdDialog: ", showPwdDialog.value);
 /**
  * 提交表单，需请求接口，异步函数
  *

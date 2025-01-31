@@ -1,17 +1,54 @@
 @import './base.css'; 
-
+/* 将元素设置为弹性布局容器 */
 .flex{
     display: flex;
 }
+/* 子元素两端对齐，垂直居中 */
 .flex-between{
     justify-content: space-between;
     align-items: center;
 }
+/* 子元素环绕对齐，垂直居中 */
 .flex-around{
     justify-content: space-around;
     align-items: center;
 }
+/* 子元素完全居中 */
 .flex-center{
     justify-content: center;
     align-items: center;
+}
+/* 子元素左对齐，垂直居中 */
+.flex-start {
+    justify-content: flex-start;
+    align-items: center;
+}
+/* 子元素右对齐，垂直居中 */
+.flex-end {
+    justify-content: flex-end;
+    align-items: center;
+}
+/* 外边距5px */
+.mr-5{
+    margin-right: 5px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.grid{
+    display: grid;
+}
+.card{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
 }
